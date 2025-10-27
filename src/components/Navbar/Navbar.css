@@ -28,3 +28,10 @@ li, a {
     gap: 20px;
     font-size: 26px;
 }
+
+.theme-btn {
+   font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
