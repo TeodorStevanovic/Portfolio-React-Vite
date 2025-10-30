@@ -52,12 +52,8 @@ const Navbar = () => {
 
       <div className={`settings-menu ${openSettings ? "show" : ""}`}>
         <button className="theme-btn" onClick={toggleTheme}>
-          Theme:{" "}
-          {theme === "light" ? (
-            <FontAwesomeIcon icon={faMoon} />
-          ) : (
-            <FontAwesomeIcon icon={faSun} />
-          )}
+          Theme:
+          {theme === "light" ? <FontAwesomeIcon icon={faMoon}/> : <FontAwesomeIcon icon={faSun}/>}
         </button>
         <button className="language-btn" onClick={toggleLanguage}>
           Language: {language === "en" ? "SR" : "EN"}
