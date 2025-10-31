@@ -23,7 +23,11 @@ const Contact = () => {
             collaboration ideas. I’ll get back to you as soon as possible.
           </p>
         </div>
-        <div className="contact-right"></div>
+        <div className="contact-right">
+          <input type="email" />
+          <input type="text" />
+          <textarea name="message"></textarea>
+        </div>
       </div>
     </section>
   );
