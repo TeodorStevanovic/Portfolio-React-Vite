@@ -4,7 +4,21 @@
     box-sizing: border-box;
 }
 
-body {
-    height: 100vh;
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100vh;
+    scroll-behavior: smooth;
     font-family: "Bebas Neue", sans-serif;
+}
+
+body.light {
+    background: #fff;
+    color: #000;
+}
+
+body.dark {
+    background: #000;
+    color: #fff;
 }

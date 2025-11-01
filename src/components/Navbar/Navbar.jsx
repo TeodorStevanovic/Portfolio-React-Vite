@@ -25,7 +25,7 @@ const Navbar = () => {
   const [openSettings, setOpenSettings] = useState(false);
 
   return (
-    <nav className="nav-container">
+    <section  className="navbar">
       <h2 className="nav-title">
         <a href="#home">Theodor.</a>
       </h2>
@@ -59,7 +59,7 @@ const Navbar = () => {
           Language: {language === "en" ? "SR" : "EN"}
         </button>
       </div>
-    </nav>
+    </section>
   );
 };
 
