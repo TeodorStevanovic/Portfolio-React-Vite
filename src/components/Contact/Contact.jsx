@@ -23,11 +23,15 @@ const Contact = () => {
             collaboration ideas. I’ll get back to you as soon as possible.
           </p>
         </div>
-        <div className="contact-right">
-          <input type="email" />
-          <input type="text" />
-          <textarea name="message"></textarea>
-        </div>
+        <form className="contact-right">
+          <label htmlFor="">Your Name</label>
+          <input type="text" placeholder="Enter your name" name="name" />
+          <label htmlFor="">Your Email</label>
+          <input type="email" placeholder="Enter your email" name="email" />
+          <label htmlFor="">Write your message here</label>
+          <textarea name="message" rows="8" placeholder="Enter your message"></textarea>
+          <button type="submit" className="contact-submit">Submit Now</button>
+        </form>
       </div>
     </section>
   );
