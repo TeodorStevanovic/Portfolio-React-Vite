@@ -27,13 +27,13 @@ const AboutMe = () => {
   };
 
   return (
-    <section id="about-me" className="about-me-container">
+    <div id="about-me" className="about-me">
       <h1 className="about-me-title">{texts[language].about}</h1>
       <div className="about-me-info">
         <p>{texts[language].title}</p>
         <img src={MyImage} alt="profile-picture" className="profile-picture" />
       </div>
-    </section>
+    </div>
   );
 };
 
