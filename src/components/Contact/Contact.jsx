@@ -13,7 +13,6 @@ const Contact = () => {
     <section id="contact" className="contact-container">
       <div className="contact-title">
         <h1>{texts[language].title}</h1>
-        <img src={theme_pattern} alt="" />
       </div>
       <div className="contact-section">
         <div className="contact-left">
