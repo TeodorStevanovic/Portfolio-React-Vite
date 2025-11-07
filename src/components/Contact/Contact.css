@@ -49,7 +49,7 @@
 }
 
 .contact-right input {
-    border: none;
+    border: 1px solid brown;
     width: 500px;
     height: 50px;
     padding-left: 20px;
@@ -58,7 +58,7 @@
 }
 
 .contact-right textarea {
-    border: none;
+    border: 1px solid brown;
     width: 500px;
     padding: 10px;
     border-radius: 4px;
@@ -66,7 +66,7 @@
 }
 
 .contact-submit {
-    border: none;
+    border: 3px solid brown;
     border-radius: 50px;
     font-size: 22px;
     padding: 20px 60px;
