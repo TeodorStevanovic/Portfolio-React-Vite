@@ -1,12 +1,17 @@
 import React from "react";
-import "./Projects.css"
+import "./Projects.css";
 
 const Projects = () => {
-    return (
-        <div id="projects" className="projects">
-            <h1>My Projects</h1>
-        </div>
-    )
-}
+  return (
+    <section id="projects" className="projects">
+      <div className="projects-title">
+        <h1>My Projects</h1>
+      </div>
+      <div className="projects-container">
+        
+      </div>
+    </section>
+  );
+};
 
 export default Projects;
