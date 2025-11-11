@@ -11,12 +11,18 @@ const Contact = () => {
       titleLeft: "Započnimo razgovor",
       description:
         "Slobodno me kontaktiraj ako imaš bilo kakva pitanja, sugestije ili ideje za saradnju. Odgovoriću ti čim bude moguće.",
+      lableTitleOne: "Tvoje Ime",
+      lableTitleTwo: "Tvoj Email",
+      textareaTitle: "Upisi tvoju poruku ovde",
     },
     en: {
       title: "Contact me",
       titleLeft: "Let's Talk",
       description:
         "Feel free to reach out if you have any questions, suggestions, or collaboration ideas. I’ll get back to you as soon as possible.",
+      lableTitleOne: "Your Name",
+      lableTitleTwo: "Your Email",
+      textareaTitle: "Write your message here"
     },
   };
   return (
@@ -30,11 +36,11 @@ const Contact = () => {
           <p>{texts[language].description}</p>
         </div>
         <form className="contact-right">
-          <label htmlFor="">Your Name</label>
+          <label htmlFor="">{texts[language].lableTitleOne}</label>
           <input type="text" placeholder="Enter your name" name="name" />
-          <label htmlFor="">Your Email</label>
+          <label htmlFor="">{texts[language].lableTitleTwo}</label>
           <input type="email" placeholder="Enter your email" name="email" />
-          <label htmlFor="">Write your message here</label>
+          <label htmlFor="">{texts[language].textareaTitle}</label>
           <textarea
             name="message"
             rows="8"
