@@ -14,6 +14,10 @@ const Contact = () => {
       lableTitleOne: "Tvoje Ime",
       lableTitleTwo: "Tvoj Email",
       textareaTitle: "Upisi tvoju poruku ovde",
+      inputName: "Upisi svoje ime",
+      inputEmail: "Upisi svoju email adresu",
+      inputMessage: "Upisi svoju poruku",
+      submitBtn: "Posalji sada",
     },
     en: {
       title: "Contact me",
@@ -22,7 +26,11 @@ const Contact = () => {
         "Feel free to reach out if you have any questions, suggestions, or collaboration ideas. I’ll get back to you as soon as possible.",
       lableTitleOne: "Your Name",
       lableTitleTwo: "Your Email",
-      textareaTitle: "Write your message here"
+      textareaTitle: "Write your message here",
+      inputName: "Enter your name",
+      inputEmail: "Enter your email",
+      inputMessage: "Enter your message",
+      submitBtn: "Submit Now",
     },
   };
   return (
@@ -37,17 +45,17 @@ const Contact = () => {
         </div>
         <form className="contact-right">
           <label htmlFor="">{texts[language].lableTitleOne}</label>
-          <input type="text" placeholder="Enter your name" name="name" />
+          <input type="text" placeholder={texts[language].inputName} name="name" />
           <label htmlFor="">{texts[language].lableTitleTwo}</label>
-          <input type="email" placeholder="Enter your email" name="email" />
+          <input type="email" placeholder={texts[language].inputEmail} name="email" />
           <label htmlFor="">{texts[language].textareaTitle}</label>
           <textarea
             name="message"
             rows="8"
-            placeholder="Enter your message"
+            placeholder={texts[language].inputMessage}
           ></textarea>
           <button type="submit" className="contact-submit">
-            Submit Now
+            {texts[language].submitBtn}
           </button>
         </form>
       </div>
