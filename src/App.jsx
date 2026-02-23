@@ -1,3 +1,4 @@
+import { ChakraProvider } from "@chakra-ui/react";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import AboutMe from "./components/AboutMe/AboutMe";
@@ -7,14 +8,14 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <div>
+    <ChakraProvider>
       <Navbar />
       <Hero />
       <AboutMe />
       <Projects />
       <Contact />
       <Footer />
-    </div>
+    </ChakraProvider>
   );
 }
 
