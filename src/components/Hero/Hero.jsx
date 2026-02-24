@@ -1,10 +1,11 @@
-import React from "react";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import LanguageContext from "../../context/LanguageContext";
-import "./Hero.css";
+import ThemeContext from "../../context/ThemeContext";
+import { Flex, Image, Text, Heading } from "@chakra-ui/react";
 import MyImage from "../../assets/profile-avatar.png";
 
 const Hero = () => {
+  const { theme } = useContext(ThemeContext);
   const { language } = useContext(LanguageContext);
   const texts = {
     sr: {
@@ -22,14 +23,38 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="hero-container">
-      <img src={MyImage} alt="profile-picture" className="profile-picture" />
-      <div className="hero-title">
-        <h2>{texts[language].titleOne}</h2>
-        <h1>{texts[language].titleTwo}</h1>
-        <p>{texts[language].description}</p>
-      </div>
-    </section>
+    <Flex
+      id="home"
+      h="100vh"
+      direction={{ base: "column", md: "row" }}
+      justify={{ base: "center", md: "space-around" }}
+      align="center"
+      px={{ base: "4", md: "0" }}
+      py={{ base: "8", md: "0" }}
+      bg={theme === "light" ? "yellow.100" : "gray.900"}
+    >
+      <Image
+        src={MyImage}
+        boxSize={{ base: "200px", md: "400px" }}
+        mb={{ base: "6", md: "0" }}
+      />
+      <Flex
+        direction="column"
+        justify="center"
+        align={{ base: "center", md: "flex-start" }}
+        gap={4}
+      >
+        <Heading as="h2" size={{ base: "xl", md: "3xl" }}>
+          {texts[language].titleOne}
+        </Heading>
+        <Heading as="h1" size={{ base: "2xl", md: "5xl" }} color="yellow.700">
+          {texts[language].titleTwo}
+        </Heading>
+        <Text as="p" fontSize={{ base: "lg", md: "2xl" }} textAlign="center">
+          {texts[language].description}
+        </Text>
+      </Flex>
+    </Flex>
   );
 };
 
