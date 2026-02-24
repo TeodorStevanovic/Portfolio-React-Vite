@@ -67,7 +67,7 @@ const Navbar = () => {
         />
       </Box>
 
-      <Box position="relative">
+      <Box position="relative" display={{ base: "none", md: "block" }}>
         <Button
           onClick={() => setOpenSettings((prev) => !prev)}
           variant="ghost"

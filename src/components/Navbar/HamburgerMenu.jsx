@@ -21,14 +21,14 @@ const HamburgerMenu = ({ open, onClose, texts, language }) => {
       <VStack
         position="fixed"
         top="0"
-        left="0"
+        right="0"
         h="100vh"
-        w="70%"
+        w="60%"
         maxW="400px"
         bg="gray.800"
         p="8"
         spacing="6"
-        align="flex-start"
+        align="center"
         zIndex="20"
       >
         <Link href="#home" onClick={onClose} fontSize="2xl" color="white">
