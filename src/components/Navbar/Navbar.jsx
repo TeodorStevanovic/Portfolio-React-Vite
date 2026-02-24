@@ -1,8 +1,9 @@
 import React, { useContext, useState } from "react";
 import LanguageContext from "../../context/LanguageContext";
 import SettingsMenu from "./SettingsMenu";
+import HamburgerMenu from "./HamburgerMenu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGear } from "@fortawesome/free-solid-svg-icons";
+import { faGear, faBars } from "@fortawesome/free-solid-svg-icons";
 import { Flex, Heading, Link, HStack, Box, Button } from "@chakra-ui/react";
 
 const Navbar = () => {
@@ -22,6 +23,7 @@ const Navbar = () => {
     },
   };
   const [openSettings, setOpenSettings] = useState(false);
+  const [openHamburger, setOpenHamburger] = useState(false);
 
   return (
     <Flex
@@ -48,6 +50,22 @@ const Navbar = () => {
         <Link href="#projects">{texts[language].project}</Link>
         <Link href="#contact">{texts[language].contact}</Link>
       </HStack>
+
+      <Box position="relative" display={{ base: "block", md: "none" }}>
+        <Button
+          variant="ghost"
+          onClick={() => setOpenHamburger((prev) => !prev)}
+        >
+          <FontAwesomeIcon icon={faBars} />
+        </Button>
+
+        <HamburgerMenu
+          open={openHamburger}
+          onClose={() => setOpenHamburger(false)}
+          texts={texts}
+          language={language}
+        />
+      </Box>
 
       <Box position="relative">
         <Button
