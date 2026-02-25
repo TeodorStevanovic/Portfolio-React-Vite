@@ -27,22 +27,38 @@ const AboutMe = () => {
   };
 
   return (
-    <Flex id="about-me" h="100vh" direction="column" pt="90px" gap="12">
+    <Flex
+      id="about-me"
+      h="100vh"
+      direction="column"
+      pt="90px"
+      gap={{ base: "6", md: "10" }}
+    >
       <Heading as="h1" textAlign="center" size="5xl">
         About Me
       </Heading>
-      <Flex w="100%" flex="1" justify="space-around" align="center" gap="10">
+      <Flex
+        w="100%"
+        flex="1"
+        direction={{ base: "column", md: "column", lg: "row" }}
+        justify="space-around"
+        align="center"
+      >
         <Text
           as="p"
-          w="650px"
-          fontSize="2xl"
+          w={{ base: "90%", md: "550px", lg: "650px" }}
+          fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
           fontWeight="medium"
           textAlign="center"
           lineHeight="1.5"
         >
           {texts[language].title}
         </Text>
-        <Image src={MyImage} boxSize="400px" alt="profile-picture" />
+        <Image
+          src={MyImage}
+          boxSize={{ base: "200px", md: "300px", lg: "400px" }}
+          alt="profile-picture"
+        />
       </Flex>
     </Flex>
   );
