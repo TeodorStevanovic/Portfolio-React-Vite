@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import { Flex, Heading, Text, Image } from "@chakra-ui/react";
 import LanguageContext from "../../context/LanguageContext";
+import ThemeContext from "../../context/ThemeContext";
 import MyImage from "../../assets/profile-avatar.png";
 
 const AboutMe = () => {
+  const { theme } = useContext(ThemeContext);
   const { language } = useContext(LanguageContext);
   const texts = {
     sr: {
@@ -33,9 +35,10 @@ const AboutMe = () => {
       direction="column"
       pt="90px"
       gap={{ base: "6", md: "10" }}
+      bg={theme === "light" ? "yellow.100" : "gray.900"}
     >
       <Heading as="h1" textAlign="center" size="5xl">
-        About Me
+        {texts[language].about}
       </Heading>
       <Flex
         w="100%"
