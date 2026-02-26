@@ -1,14 +1,23 @@
 import React from "react";
-import "./Footer.css";
+import { Flex, Heading, Text, Link } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
-    <section className="footer">
-      <h1>
-        <a href="#home">Theodor.</a>
-      </h1>
-      <p>&copy; 2025 Teodor Stevanovic. All rights</p>
-    </section>
+    <Flex
+      as="footer"
+      w="100%"
+      justify="space-between"
+      align="center"
+      p="4"
+      bg="gray.500"
+    >
+      <Heading as="h1" size="2xl">
+        <Link href="#home">Theodor.</Link>
+      </Heading>
+      <Text as="p" fontSize="2xl">
+        &copy; 2026 Teodor Stevanovic. All rights reserved.
+      </Text>
+    </Flex>
   );
 };
 
