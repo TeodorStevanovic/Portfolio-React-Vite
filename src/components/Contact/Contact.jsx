@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
+import { Flex, Heading, Text, Input, Textarea, Button } from "@chakra-ui/react";
 import LanguageContext from "../../context/LanguageContext";
 import theme_pattern from "../../assets/theme_pattern.svg";
-import "./Contact.css";
 
 const Contact = () => {
   const { language } = useContext(LanguageContext);
@@ -34,32 +34,46 @@ const Contact = () => {
     },
   };
   return (
-    <section id="contact" className="contact-container">
-      <div className="contact-title">
-        <h1>{texts[language].title}</h1>
-      </div>
-      <div className="contact-section">
-        <div className="contact-left">
-          <h1>{texts[language].titleLeft}</h1>
-          <p>{texts[language].description}</p>
-        </div>
-        <form className="contact-right">
-          <label htmlFor="">{texts[language].lableTitleOne}</label>
-          <input type="text" placeholder={texts[language].inputName} name="name" />
-          <label htmlFor="">{texts[language].lableTitleTwo}</label>
-          <input type="email" placeholder={texts[language].inputEmail} name="email" />
-          <label htmlFor="">{texts[language].textareaTitle}</label>
-          <textarea
+    <Flex id="contact" h="100vh" direction="column" pt="90px">
+      <Heading as="h1" textAlign="center" size="5xl">
+        {texts[language].title}
+      </Heading>
+
+      <Flex flex="1" w="100%" justify="space-around" align="center">
+        <Flex direction="column" gap="6">
+          <Heading as="h1" size="5xl" fontWeight="bold">
+            {texts[language].titleLeft}
+          </Heading>
+          <Text as="p" maxW="700px" fontSize="2xl">
+            {texts[language].description}
+          </Text>
+        </Flex>
+
+        <Flex as="form" w="500px" direction="column" gap="6">
+          <Input
+            type="text"
+            placeholder={texts[language].inputName}
+            name="name"
+            p="10px"
+          />
+          <Input
+            type="email"
+            placeholder={texts[language].inputEmail}
+            name="email"
+            p="10px"
+          />
+          <Textarea
             name="message"
             rows="8"
             placeholder={texts[language].inputMessage}
-          ></textarea>
-          <button type="submit" className="contact-submit">
+            p="10px"
+          />
+          <Button type="submit" w="200px" rounded="md" alignSelf="center">
             {texts[language].submitBtn}
-          </button>
-        </form>
-      </div>
-    </section>
+          </Button>
+        </Flex>
+      </Flex>
+    </Flex>
   );
 };
 
