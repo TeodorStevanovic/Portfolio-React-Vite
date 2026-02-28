@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { Flex, Heading, Text, Input, Textarea, Button } from "@chakra-ui/react";
 import LanguageContext from "../../context/LanguageContext";
-import theme_pattern from "../../assets/theme_pattern.svg";
 
 const Contact = () => {
   const { language } = useContext(LanguageContext);
@@ -34,39 +33,69 @@ const Contact = () => {
     },
   };
   return (
-    <Flex id="contact" h="100vh" direction="column" pt="90px">
+    <Flex
+      id="contact"
+      minH="100vh"
+      direction="column"
+      pt="90px"
+      gap={{ base: "10", lg: "0" }}
+    >
       <Heading as="h1" textAlign="center" size="5xl">
         {texts[language].title}
       </Heading>
 
-      <Flex flex="1" w="100%" justify="space-around" align="center">
-        <Flex direction="column" gap="6">
+      <Flex
+        flex="1"
+        w="100%"
+        direction={{ base: "column", md: "column", lg: "row" }}
+        justify="space-around"
+        align="center"
+        gap={{ base: "10", md: "0" }}
+      >
+        <Flex
+          direction="column"
+          align={{ base: "center", md: "center", lg: "flex-start" }}
+          gap="6"
+        >
           <Heading as="h1" size="5xl" fontWeight="bold">
             {texts[language].titleLeft}
           </Heading>
-          <Text as="p" maxW="700px" fontSize="2xl">
+          <Text
+            as="p"
+            w={{ base: "90%", md: "700px" }}
+            fontSize="2xl"
+            textAlign={{ base: "center", md: "center", lg: "left" }}
+          >
             {texts[language].description}
           </Text>
         </Flex>
 
-        <Flex as="form" w="500px" direction="column" gap="6">
+        <Flex
+          as="form"
+          w={{ base: "90%", md: "500px" }}
+          direction="column"
+          gap="6"
+        >
           <Input
             type="text"
             placeholder={texts[language].inputName}
             name="name"
             p="10px"
+            variant="flushed"
           />
           <Input
             type="email"
             placeholder={texts[language].inputEmail}
             name="email"
             p="10px"
+            variant="flushed"
           />
           <Textarea
             name="message"
             rows="8"
             placeholder={texts[language].inputMessage}
             p="10px"
+            variant="flushed"
           />
           <Button type="submit" w="200px" rounded="md" alignSelf="center">
             {texts[language].submitBtn}
