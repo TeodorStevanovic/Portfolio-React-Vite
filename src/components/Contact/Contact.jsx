@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import { Flex, Heading, Text, Input, Textarea, Button } from "@chakra-ui/react";
 import LanguageContext from "../../context/LanguageContext";
+import ThemeContext from "../../context/ThemeContext";
 
 const Contact = () => {
+  const { theme } = useContext(ThemeContext);
   const { language } = useContext(LanguageContext);
   const texts = {
     sr: {
@@ -39,6 +41,7 @@ const Contact = () => {
       direction="column"
       pt="90px"
       gap={{ base: "10", lg: "0" }}
+      bg={theme === "light" ? "yellow.100" : "gray.900"}
     >
       <Heading as="h1" textAlign="center" size="5xl">
         {texts[language].title}
@@ -99,7 +102,13 @@ const Contact = () => {
             p="10px"
             variant="flushed"
           />
-          <Button type="submit" w="200px" rounded="md" alignSelf="center">
+          <Button
+            type="submit"
+            w="150px"
+            rounded="md"
+            alignSelf="center"
+            colorPalette={theme === "light" ? "gray" : "yellow"}
+          >
             {texts[language].submitBtn}
           </Button>
         </Flex>
