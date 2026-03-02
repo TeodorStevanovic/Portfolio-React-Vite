@@ -50,7 +50,9 @@ const Contact = () => {
         direction={{ base: "column", md: "column", lg: "row" }}
         justify="space-around"
         align="center"
-        gap={{ base: "10", md: "0" }}
+        pl={{ base: "0", md: "10px" }}
+        pr={{ base: "0", md: "10px" }}
+        gap={{ base: "10", md: "5" }}
       >
         <Flex
           direction="column"
@@ -62,7 +64,7 @@ const Contact = () => {
           </Heading>
           <Text
             as="p"
-            w={{ base: "90%", md: "700px" }}
+            w={{ base: "90%", md: "600px" }}
             fontSize="2xl"
             textAlign={{ base: "center", md: "center", lg: "left" }}
           >
