@@ -1,16 +1,12 @@
 import React from "react";
-import "./Projects.css";
+import { Flex, Heading, SimpleGrid, Card } from "@chakra-ui/react";
 
 const Projects = () => {
   return (
-    <section id="projects" className="projects">
-      <div className="projects-title">
-        <h1>My Projects</h1>
-      </div>
-      <div className="projects-container">
-        
-      </div>
-    </section>
+    <Flex id="projects" h="100vh" direction="column" align="center" pt="90px">
+      <Heading as="h1">My Projects</Heading>
+      <SimpleGrid column={3} spacing="10"></SimpleGrid>
+    </Flex>
   );
 };
 
