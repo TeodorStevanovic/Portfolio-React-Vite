@@ -18,9 +18,9 @@ const ProjectCard = ({ title, description, image, github }) => {
     >
       <Card.Body display="flex" flexDirection="column" gap="4" p="4">
         <Image
-          objectFit="cover"
+          fit="cover"
           rounded="md"
-          h="280px"
+          h="180px"
           src={image}
           alt={title}
           mb="4"

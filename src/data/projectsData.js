@@ -1,4 +1,6 @@
 import mockPicture from "../assets/mock-rest-api.png";
+import chakraPicture from "../assets/chakra-ui-app.png";
+import matirialPicture from "../assets/matirial-ui-app.png";
 
 export const projects = [
   {
@@ -12,15 +14,17 @@ export const projects = [
   {
     id: 2,
     title: "E-commerce Web Application (React & Chakra UI)",
-    description: "hajkhakjfhksflkshkf",
-    image: "",
+    description: `Simple e-commerce application built with React and Chakra UI.
+    Focused on creating responsive layouts, reusable components, and a clean, user-friendly interface.`,
+    image: chakraPicture,
     github: "",
   },
   {
     id: 3,
     title: "Admin Dashboard Web Application (React & Material UI)",
-    description: "hajkhakjfhksflkshkf",
-    image: "",
+    description: `Admin dashboard project built using React and Material UI.
+    Includes basic layout structure, organized components, and simple data presentation for practice and learning purposes.`,
+    image: matirialPicture,
     github: "",
   },
 ];
