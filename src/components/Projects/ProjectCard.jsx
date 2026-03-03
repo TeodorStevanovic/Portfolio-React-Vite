@@ -1,45 +1,54 @@
-import React from "react";
-import { Card, Heading, Image, Text, Button, CardBody } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { Heading, Image, Text, Button, Box } from "@chakra-ui/react";
 
 const ProjectCard = ({ title, description, image, github }) => {
+  const [hovered, setHovered] = useState(false);
+
   return (
-    <Card.Root
-      maxW="350px"
-      w="100%"
-      rounded="lg"
+    <Box
+      position="relative"
       overflow="hidden"
-      shadow="md"
-      transition="0.3s ease"
-      _hover={{
-        shadow: "lg",
-        transform: "translateY(-4px)",
-      }}
-      bg="gray.500"
+      w="100%"
+      h="260px"
+      rounded="md"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
-      <Card.Body display="flex" flexDirection="column" gap="4" p="4">
-        <Image
-          fit="cover"
-          rounded="md"
-          h="180px"
-          src={image}
-          alt={title}
-          mb="4"
-        />
-        <Heading size="xl">{title}</Heading>
-        <Text fontSize="md">{description}</Text>
+      <Image src={image} alt={title} objectFit="cover" w="100%" h="100%" />
+
+      <Box
+        position="absolute"
+        bottom="0"
+        left="0"
+        w="100%"
+        h="100%"
+        bg="rgba(0, 0, 0, 0.45)"
+        backdropFilter="blur(15px)"
+        border="1px solid rgba(255, 255, 255, 0.2)"
+        color="white"
+        p="4"
+        transform={hovered ? "translateY(0)" : "translateY(100%)"}
+        transition="transform 0.3s ease"
+      >
+        <Heading size="md" mb="2">
+          {title}
+        </Heading>
+        <Text fontSize="sm" mb="3">
+          {description}
+        </Text>
         <Button
           as="a"
           href={github}
+          px="8"
           target="_blank"
           rel="noopener noreferrer"
-          size="sm"
-          mt="auto"
+          size="lg"
           colorPalette="yellow"
         >
           View Project
         </Button>
-      </Card.Body>
-    </Card.Root>
+      </Box>
+    </Box>
   );
 };
 
