@@ -11,14 +11,14 @@ export const projects = [
   },
   {
     id: 2,
-    title: "project 2",
+    title: "E-commerce Web Application (React & Chakra UI)",
     description: "hajkhakjfhksflkshkf",
     image: "",
     github: "",
   },
   {
     id: 3,
-    title: "project 3",
+    title: "Admin Dashboard Web Application (React & Material UI)",
     description: "hajkhakjfhksflkshkf",
     image: "",
     github: "",

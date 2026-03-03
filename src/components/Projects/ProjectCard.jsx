@@ -6,9 +6,9 @@ const ProjectCard = ({ title, description, image, github }) => {
     <Card.Root
       maxW="350px"
       w="100%"
-      borderRadius="lg"
+      rounded="lg"
       overflow="hidden"
-      shadow="sm"
+      shadow="md"
       transition="0.3s ease"
       _hover={{
         shadow: "lg",
@@ -16,7 +16,7 @@ const ProjectCard = ({ title, description, image, github }) => {
       }}
       bg="gray.500"
     >
-      <Card.Body display="flex" flexDirection="column" gap="4" p="5">
+      <Card.Body display="flex" flexDirection="column" gap="4" p="4">
         <Image
           objectFit="cover"
           rounded="md"
@@ -26,9 +26,7 @@ const ProjectCard = ({ title, description, image, github }) => {
           mb="4"
         />
         <Heading size="xl">{title}</Heading>
-        <Text fontSize="sm">
-          {description}
-        </Text>
+        <Text fontSize="md">{description}</Text>
         <Button
           as="a"
           href={github}

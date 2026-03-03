@@ -6,8 +6,8 @@ import ProjectCard from "./ProjectCard";
 const Projects = () => {
   return (
     <Flex id="projects" h="100vh" direction="column" align="center" gap="10" pt="90px">
-      <Heading as="h1">My Projects</Heading>
-      <SimpleGrid columns={3} gap="10">
+      <Heading as="h1" size="5xl">My Projects</Heading>
+      <SimpleGrid columns={3} gap="20">
         {projects.map((project) => (
           <ProjectCard key={project.id} {...project} />
         ))}
