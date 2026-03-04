@@ -17,7 +17,7 @@ export const projects = [
     description: `Simple e-commerce application built with React and Chakra UI.
     Focused on creating responsive layouts, reusable components, and a clean, user-friendly interface.`,
     image: chakraPicture,
-    github: "",
+    github: "https://github.com/TeodorStevanovic/chakra-ui-demo",
   },
   {
     id: 3,
@@ -25,6 +25,6 @@ export const projects = [
     description: `Admin dashboard project built using React and Material UI.
     Includes basic layout structure, organized components, and simple data presentation for practice and learning purposes.`,
     image: matirialPicture,
-    github: "",
+    github: "https://github.com/TeodorStevanovic/mui-demo",
   },
 ];
