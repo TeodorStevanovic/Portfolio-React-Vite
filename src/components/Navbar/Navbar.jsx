@@ -28,8 +28,9 @@ const Navbar = () => {
   return (
     <Flex
       as="nav"
-      width="100%"
+      w="100%"
       position="fixed"
+      zIndex="1000"
       justify="space-between"
       align="center"
       p={{ base: "1", md: "2", lg: "2" }}

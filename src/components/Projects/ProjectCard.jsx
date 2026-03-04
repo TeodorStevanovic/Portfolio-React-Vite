@@ -14,7 +14,7 @@ const ProjectCard = ({ title, description, image, github }) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <Image src={image} alt={title} objectFit="cover" w="100%" h="100%" />
+      <Image src={image} alt={title} objectFit="cover" w="100%" h="100%" zIndex="0" />
 
       <Box
         position="absolute"

@@ -29,7 +29,7 @@ const HamburgerMenu = ({ open, onClose, texts, language }) => {
         p="8"
         spacing="6"
         align="center"
-        zIndex="20"
+        zIndex="1100"
       >
         <Link href="#home" onClick={onClose} fontSize="2xl" color="white">
           {texts[language].home}
