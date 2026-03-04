@@ -28,7 +28,7 @@ const ProjectCard = ({ title, description, image, github }) => {
         color="white"
         p="4"
         transform={hovered ? "translateY(0)" : "translateY(100%)"}
-        transition="transform 0.3s ease"
+        transition="transform 0.6s ease-out"
       >
         <Heading size="md" mb="2">
           {title}

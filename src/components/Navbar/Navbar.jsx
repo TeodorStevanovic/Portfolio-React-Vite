@@ -35,8 +35,8 @@ const Navbar = () => {
       p={{ base: "1", md: "2", lg: "2" }}
       bg="gray.500"
     >
-      <Heading size="md">
-        <Link href="#home">Theodor.</Link>
+      <Heading size="3xl">
+        <Link href="#home">Theodor</Link>
       </Heading>
 
       <HStack
