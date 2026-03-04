@@ -9,7 +9,7 @@ const ProjectCard = ({ title, description, image, github }) => {
       position="relative"
       overflow="hidden"
       w="100%"
-      h="260px"
+      h={{ base: "170px", md: "200px", lg: "260px" }}
       rounded="md"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -26,23 +26,23 @@ const ProjectCard = ({ title, description, image, github }) => {
         backdropFilter="blur(15px)"
         border="1px solid rgba(255, 255, 255, 0.2)"
         color="white"
-        p="4"
+        p={{base: "3", md: "4"}}
         transform={hovered ? "translateY(0)" : "translateY(100%)"}
         transition="transform 0.6s ease-out"
       >
-        <Heading size="md" mb="2">
+        <Heading size={{ base: "sm", md: "md" }} mb="2">
           {title}
         </Heading>
-        <Text fontSize="sm" mb="3">
+        <Text fontSize={{ base: "xs", md: "sm" }} mb="3">
           {description}
         </Text>
         <Button
           as="a"
           href={github}
-          px="8"
+          px={{ base: "4", md: "6", lg: "8" }}
           target="_blank"
           rel="noopener noreferrer"
-          size="lg"
+          size={{ base: "sm", md: "md", lg: "lg" }}
           colorPalette="yellow"
         >
           View Project
