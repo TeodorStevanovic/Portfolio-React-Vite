@@ -34,7 +34,10 @@ const Navbar = () => {
       justify="space-between"
       align="center"
       p={{ base: "1", md: "2", lg: "2" }}
-      bg="gray.500"
+      bg="blackAlpha.600"
+      backdropFilter="blur(10px)"
+      borderBottom="1px solid"
+      borderColor="whiteAlpha.200"
     >
       <Heading size="3xl">
         <Link href="#home">Theodor</Link>
