@@ -25,6 +25,13 @@ const Navbar = () => {
   const [openSettings, setOpenSettings] = useState(false);
   const [openHamburger, setOpenHamburger] = useState(false);
 
+  const navLinks = [
+    { href: "#home", label: texts[language].home },
+    { href: "#about-me", label: texts[language].about },
+    { href: "#projects", label: texts[language].project },
+    { href: "#contact", label: texts[language].contact },
+  ];
+
   return (
     <Flex
       as="nav"
@@ -49,50 +56,20 @@ const Navbar = () => {
         gap="20px"
         fontSize={{ base: "md", md: "xl", lg: "2xl" }}
       >
-        <Link
-          href="#home"
-          display="inline-block"
-          _hover={{
-            color: "teal.300",
-            transform: "scale(1.08)",
-          }}
-          transition="transform 0.2s ease, color 0.4s ease"
-        >
-          {texts[language].home}
-        </Link>
-        <Link
-          href="#about-me"
-          display="inline-block"
-          _hover={{
-            color: "teal.300",
-            transform: "scale(1.08)",
-          }}
-          transition="transform 0.2s ease, color 0.4s ease"
-        >
-          {texts[language].about}
-        </Link>
-        <Link
-          href="#projects"
-          display="inline-block"
-          _hover={{
-            color: "teal.300",
-            transform: "scale(1.08)",
-          }}
-          transition="transform 0.2s ease, color 0.4s ease"
-        >
-          {texts[language].project}
-        </Link>
-        <Link
-          href="#contact"
-          display="inline-block"
-          _hover={{
-            color: "teal.300",
-            transform: "scale(1.08)",
-          }}
-          transition="transform 0.2s ease, color 0.4s ease"
-        >
-          {texts[language].contact}
-        </Link>
+        {navLinks.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            display="inline-block"
+            _hover={{
+              color: "teal.300",
+              transform: "scale(1.08)",
+            }}
+            transition="transform 0.2s ease, color 0.2s ease"
+          >
+            {link.label}
+          </Link>
+        ))}
       </HStack>
 
       <Box position="relative" display={{ base: "block", md: "none" }}>
