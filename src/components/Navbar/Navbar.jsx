@@ -24,6 +24,7 @@ const Navbar = () => {
   };
   const [openSettings, setOpenSettings] = useState(false);
   const [openHamburger, setOpenHamburger] = useState(false);
+  const [activeLink, setActiveLink] = useState("#home");
 
   const navLinks = [
     { href: "#home", label: texts[language].home },
@@ -46,14 +47,16 @@ const Navbar = () => {
       borderBottom="1px solid"
       borderColor="whiteAlpha.200"
     >
-      <Heading size="3xl">
-        <Link href="#home">Theodor</Link>
+      <Heading size="2xl">
+        <Link href="#home" onClick={() => setActiveLink("#home")}>
+          Theodor
+        </Link>
       </Heading>
 
       <HStack
         as="ul"
         display={{ base: "none", md: "flex" }}
-        gap="20px"
+        gap={8}
         fontSize={{ base: "md", md: "xl", lg: "2xl" }}
       >
         {navLinks.map((link) => (
@@ -66,6 +69,8 @@ const Navbar = () => {
               transform: "scale(1.08)",
             }}
             transition="transform 0.2s ease, color 0.2s ease"
+            onClick={() => setActiveLink(link.href)}
+            color={activeLink === link.href ? "teal.300" : "inherit"}
           >
             {link.label}
           </Link>
