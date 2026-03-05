@@ -48,7 +48,11 @@ const Navbar = () => {
       borderColor="whiteAlpha.200"
     >
       <Heading size="2xl">
-        <Link href="#home" onClick={() => setActiveLink("#home")}>
+        <Link
+          href="#home"
+          textDecoration="none"
+          onClick={() => setActiveLink("#home")}
+        >
           Theodor
         </Link>
       </Heading>
@@ -65,12 +69,18 @@ const Navbar = () => {
             href={link.href}
             display="inline-block"
             _hover={{
+              textDecoration: "none",
               color: "teal.300",
               transform: "scale(1.08)",
             }}
-            transition="transform 0.2s ease, color 0.2s ease"
+            transition="transform 0.2s ease, color 0.2s ease, border-bottom 0.2s ease"
             onClick={() => setActiveLink(link.href)}
             color={activeLink === link.href ? "teal.300" : "inherit"}
+            borderBottom={
+              activeLink === link.href
+                ? "2px solid teal"
+                : "2px solid transparent"
+            }
           >
             {link.label}
           </Link>
