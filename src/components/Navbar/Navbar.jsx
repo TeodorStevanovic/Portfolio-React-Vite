@@ -49,10 +49,50 @@ const Navbar = () => {
         gap="20px"
         fontSize={{ base: "md", md: "xl", lg: "2xl" }}
       >
-        <Link href="#home">{texts[language].home}</Link>
-        <Link href="#about-me">{texts[language].about}</Link>
-        <Link href="#projects">{texts[language].project}</Link>
-        <Link href="#contact">{texts[language].contact}</Link>
+        <Link
+          href="#home"
+          display="inline-block"
+          _hover={{
+            color: "teal.300",
+            transform: "scale(1.08)",
+          }}
+          transition="transform 0.2s ease, color 0.4s ease"
+        >
+          {texts[language].home}
+        </Link>
+        <Link
+          href="#about-me"
+          display="inline-block"
+          _hover={{
+            color: "teal.300",
+            transform: "scale(1.08)",
+          }}
+          transition="transform 0.2s ease, color 0.4s ease"
+        >
+          {texts[language].about}
+        </Link>
+        <Link
+          href="#projects"
+          display="inline-block"
+          _hover={{
+            color: "teal.300",
+            transform: "scale(1.08)",
+          }}
+          transition="transform 0.2s ease, color 0.4s ease"
+        >
+          {texts[language].project}
+        </Link>
+        <Link
+          href="#contact"
+          display="inline-block"
+          _hover={{
+            color: "teal.300",
+            transform: "scale(1.08)",
+          }}
+          transition="transform 0.2s ease, color 0.4s ease"
+        >
+          {texts[language].contact}
+        </Link>
       </HStack>
 
       <Box position="relative" display={{ base: "block", md: "none" }}>
