@@ -24,7 +24,7 @@ const Navbar = () => {
   };
   const [openSettings, setOpenSettings] = useState(false);
   const [openHamburger, setOpenHamburger] = useState(false);
-  const [activeLink, setActiveLink] = useState("#home");
+  const [activeLink, setActiveLink] = useState(window.location.hash || "#home");
 
   const navLinks = [
     { href: "#home", label: texts[language].home },
