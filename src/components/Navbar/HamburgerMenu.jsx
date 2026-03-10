@@ -2,8 +2,6 @@ import React from "react";
 import { Box, Flex, Link, VStack } from "@chakra-ui/react";
 
 const HamburgerMenu = ({ open, onClose, texts, language }) => {
-  if (!open) return null;
-
   return (
     <>
       <Box
@@ -12,6 +10,7 @@ const HamburgerMenu = ({ open, onClose, texts, language }) => {
         left="0"
         w="100vw"
         h="100vh"
+        display={open ? "block" : "none"}
         bg="blackAlpha.600"
         zIndex="15"
         onClick={onClose}
@@ -30,6 +29,8 @@ const HamburgerMenu = ({ open, onClose, texts, language }) => {
         spacing="6"
         align="center"
         zIndex="1100"
+        transform={open ? "translateX(0)" : "translateX(100%)"}
+        transition="transform 0.40s ease-in-out"
       >
         <Link href="#home" onClick={onClose} fontSize="2xl" color="white">
           {texts[language].home}
