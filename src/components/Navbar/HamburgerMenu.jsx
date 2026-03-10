@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Link, VStack } from "@chakra-ui/react";
+import { Box, Link, VStack } from "@chakra-ui/react";
 
 const HamburgerMenu = ({ open, onClose, texts, language }) => {
   return (
@@ -10,7 +10,8 @@ const HamburgerMenu = ({ open, onClose, texts, language }) => {
         left="0"
         w="100vw"
         h="100vh"
-        bg="blackAlpha.600"
+        bg="blackAlpha.400"
+        backdropFilter="blur(6px)"
         opacity={open ? 1 : 0}
         pointerEvents={open ? "auto" : "none"}
         transition="opacity 0.3s ease"
