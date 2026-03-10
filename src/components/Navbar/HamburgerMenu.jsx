@@ -31,6 +31,7 @@ const HamburgerMenu = ({ open, onClose, texts, language }) => {
         spacing="6"
         align="center"
         zIndex="1100"
+        boxShadow="3xl"
         transform={open ? "translateX(0)" : "translateX(100%)"}
         transition="transform 0.40s ease-in-out"
       >
