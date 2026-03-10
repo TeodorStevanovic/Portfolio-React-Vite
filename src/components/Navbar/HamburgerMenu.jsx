@@ -10,8 +10,10 @@ const HamburgerMenu = ({ open, onClose, texts, language }) => {
         left="0"
         w="100vw"
         h="100vh"
-        display={open ? "block" : "none"}
         bg="blackAlpha.600"
+        opacity={open ? 1 : 0}
+        pointerEvents={open ? "auto" : "none"}
+        transition="opacity 0.3s ease"
         zIndex="15"
         onClick={onClose}
         aria-label="Close hamburger menu"
